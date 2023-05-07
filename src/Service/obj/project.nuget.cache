@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "uHklnId300H3Ulkg/EmidpdG9yMhB+onOub02DyspqWr+P2I6ggDebQYLSDgyCIr2MJUq2KGxRs+5uzkJt0OdQ==",
+  "dgSpecHash": "VGqDCZcYrPv4rGx9uzyYq18WSDW49X50lUhIcpibT7lz47AdkNnXuCQZGeTi/xvn/smJNoNl/YEzJzWiKqqjYg==",
   "success": true,
   "projectFilePath": "C:\\Users\\ARI'S\\Desktop\\CervejinhaLove\\MainAPI\\src\\Service\\Service.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ARI'S\\.nuget\\packages\\fluentvalidation\\11.5.2\\fluentvalidation.11.5.2.nupkg.sha512"
+  ],
   "logs": []
 }
