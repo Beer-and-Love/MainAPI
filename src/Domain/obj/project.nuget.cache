@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "IACmIv/peA4ru5RsbukD1lIAJslRnOReYsW5u4l5+pYB2w5jln6ikO1lYPt4PVoBrmAbSyUMRXj0+trYtHDcag==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ARI'S\\Desktop\\CervejinhaLove\\MainAPI\\src\\Domain\\Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ARI'S\\.nuget\\packages\\fluentvalidation\\11.5.2\\fluentvalidation.11.5.2.nupkg.sha512"
+  ],
+  "logs": []
+}
