@@ -23,7 +23,7 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        [Authorize]
+        
         [Route("/api/v1/users/create")]
         public async Task<IActionResult> Create([FromBody]CreateUserViewModel userViewModel)
         {
