@@ -11,25 +11,22 @@ using Infra.Interfaces;
 
 namespace Service.Services
 {
-    public class UserService
-    {
-        public class UserServices : IUserService
+    public class UserService : IUserService
     {
         private readonly IMapper _mapper;
         private readonly IUserRepository _userRepository;
 
-        public UserServices(IMapper mapper, IUserRepository userRepository)
+        public UserService(IMapper mapper, IUserRepository userRepository)
         {
             _mapper = mapper;
             _userRepository = userRepository;
         }
-
-        public async Task<UserDto> Create(UserDto userDto) 
-        { 
+        public async Task<UserDto> Create(UserDto userDto)
+        {
             var userExist = await _userRepository.GetByEmail(userDto.Email);
 
             if (userExist != null)
-                throw new DomainException("Já existe um usuário cadastrado com esse email");
+                throw new DomainException("Já existe um usuário cadastrado com esse email!");
 
             var user = _mapper.Map<User>(userDto);
             user.Validate();
@@ -51,8 +48,8 @@ namespace Service.Services
             var userUpdated = await _userRepository.Update(user);
 
             return _mapper.Map<UserDto>(userUpdated);
-        } 
-            
+        }
+
         public async Task Remove(long id)
         {
             await _userRepository.Remove(id);
@@ -89,6 +86,5 @@ namespace Service.Services
 
             return _mapper.Map<List<UserDto>>(allUsers);
         }
-    }
     }
 }
