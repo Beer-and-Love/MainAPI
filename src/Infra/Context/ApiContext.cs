@@ -19,7 +19,7 @@ namespace Infra.Context
         public virtual DbSet<User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            => optionsBuilder.UseSqlServer();
+            => optionsBuilder.UseInMemoryDatabase("teste");
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

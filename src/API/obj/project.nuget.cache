@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "o4UjN4skpEQBFqHQ4cy/2jN3AXlOinfF5lBchhasrYgv96uo4idQ8LFQzFzzklIv7TkvBlVXWBQH0nod8Uk/xw==",
+  "dgSpecHash": "78S+CkSNZXU7ctJVgtZ6rvuj9rcXnWeC2u7gEvCQc15UXuBHqZ4/docze0c90SyrBJp4xxPj8jM/1PW9wTCuRA==",
   "success": true,
   "projectFilePath": "C:\\Users\\ARI'S\\Desktop\\CervejinhaLove\\MainAPI\\src\\API\\API.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\ARI'S\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\ARI'S\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\ARI'S\\.nuget\\packages\\fluentvalidation\\11.5.2\\fluentvalidation.11.5.2.nupkg.sha512",
+    "C:\\Users\\ARI'S\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.5\\microsoft.aspnetcore.authentication.jwtbearer.7.0.5.nupkg.sha512",
     "C:\\Users\\ARI'S\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.5\\microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
     "C:\\Users\\ARI'S\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\ARI'S\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
@@ -16,6 +17,7 @@
     "C:\\Users\\ARI'S\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.5\\microsoft.entityframeworkcore.7.0.5.nupkg.sha512",
     "C:\\Users\\ARI'S\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.5\\microsoft.entityframeworkcore.abstractions.7.0.5.nupkg.sha512",
     "C:\\Users\\ARI'S\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.5\\microsoft.entityframeworkcore.analyzers.7.0.5.nupkg.sha512",
+    "C:\\Users\\ARI'S\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\7.0.5\\microsoft.entityframeworkcore.inmemory.7.0.5.nupkg.sha512",
     "C:\\Users\\ARI'S\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.5\\microsoft.entityframeworkcore.relational.7.0.5.nupkg.sha512",
     "C:\\Users\\ARI'S\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\7.0.5\\microsoft.entityframeworkcore.sqlserver.7.0.5.nupkg.sha512",
     "C:\\Users\\ARI'S\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
@@ -30,7 +32,6 @@
     "C:\\Users\\ARI'S\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\ARI'S\\.nuget\\packages\\microsoft.identity.client\\4.45.0\\microsoft.identity.client.4.45.0.nupkg.sha512",
     "C:\\Users\\ARI'S\\.nuget\\packages\\microsoft.identity.client.extensions.msal\\2.19.3\\microsoft.identity.client.extensions.msal.2.19.3.nupkg.sha512",
-    "C:\\Users\\ARI'S\\.nuget\\packages\\microsoft.identitymodel\\7.0.0\\microsoft.identitymodel.7.0.0.nupkg.sha512",
     "C:\\Users\\ARI'S\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.21.0\\microsoft.identitymodel.abstractions.6.21.0.nupkg.sha512",
     "C:\\Users\\ARI'S\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.21.0\\microsoft.identitymodel.jsonwebtokens.6.21.0.nupkg.sha512",
     "C:\\Users\\ARI'S\\.nuget\\packages\\microsoft.identitymodel.logging\\6.21.0\\microsoft.identitymodel.logging.6.21.0.nupkg.sha512",
@@ -76,16 +77,5 @@
     "C:\\Users\\ARI'S\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\ARI'S\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "O pacote 'Microsoft.IdentityModel 7.0.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
-      "libraryId": "Microsoft.IdentityModel",
-      "targetGraphs": [
-        "net7.0"
-      ]
-    }
-  ]
+  "logs": []
 }
