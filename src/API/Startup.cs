@@ -71,7 +71,7 @@ namespace API
 
             #region Database
             services.AddDbContext<ApiContext>(options => options
-                .UseSqlServer(Configuration["ConnectionStrings:teste"])
+                .UseSqlServer(Configuration["ConnectionStrings:API"])
                 .EnableSensitiveDataLogging()
                 .UseLoggerFactory(LoggerFactory.Create(builder => builder.AddConsole())),
             ServiceLifetime.Transient);
@@ -89,6 +89,8 @@ namespace API
             services.AddScoped<IUserService, UserService>();
 
             services.AddScoped<ITokenGenerator, TokenGenerator>();
+            services.AddScoped<AuthenticationService>();
+
 
             #endregion
 

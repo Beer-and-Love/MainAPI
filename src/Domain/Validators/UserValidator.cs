@@ -44,11 +44,11 @@ namespace Domain.Validators
                 .WithMessage("O Email deve ter no mínimo 10 caracteres.")
 
                 .MaximumLength(180)
-                .WithMessage("O Email deve ter no máximo 180 caracteres.");
+                .WithMessage("O Email deve ter no máximo 180 caracteres.")
 
-                //.Matches(@"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$")
-                //.WithMessage("O e-mail informado não é válido");
-                 
+                .Matches(@"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$")
+                .WithMessage("O e-mail informado não é válido");
+
 
             RuleFor(x => x.Password)
                 .NotEmpty()
@@ -63,12 +63,12 @@ namespace Domain.Validators
                 .MaximumLength(80)
                 .WithMessage("A senha deve ter no máximo 80 caracteres.");
 
-            RuleFor(x => x.Status)
-                .NotEmpty()
-                .WithMessage("O status não pode ser vazio")
+            //RuleFor(x => x.Status)
+            //    .NotEmpty()
+            //    .WithMessage("O status não pode ser vazio")
 
-                .NotNull()
-                .WithMessage("O status não pode ser nulo");
+            //    .NotNull()
+            //    .WithMessage("O status não pode ser nulo");
 
 
         }
