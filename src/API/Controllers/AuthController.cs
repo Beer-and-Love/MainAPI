@@ -11,10 +11,10 @@ namespace API.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly AuthenticationService _authenticationService;
+        private readonly IAuthenticationService _authenticationService;
         private readonly IConfiguration _configuration;
         private readonly ITokenGenerator _tokenGenerator;
-        public AuthController(AuthenticationService authenticationService,IConfiguration configuration,
+        public AuthController(IAuthenticationService authenticationService,IConfiguration configuration,
         ITokenGenerator tokenGenerator)
         {
             _authenticationService = authenticationService;
@@ -30,7 +30,7 @@ namespace API.Controllers
             {
                 var isPasswordValid = await _authenticationService.VerifyPassword(loginViewModel.Email, loginViewModel.Password);
 
-                if (isPasswordValid)
+                if (isPasswordValid == true)
                 {
                     return Ok(new ResultViewModel
                     {

@@ -89,7 +89,7 @@ namespace API
             services.AddScoped<IUserService, UserService>();
 
             services.AddScoped<ITokenGenerator, TokenGenerator>();
-            services.AddScoped<AuthenticationService>();
+            services.AddScoped<IAuthenticationService, AuthenticationService>();
 
 
             #endregion
