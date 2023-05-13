@@ -1,4 +1,5 @@
 C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\Infra\bin\Debug\net7.0\Infra.deps.json
+C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\Infra\bin\Debug\net7.0\Infra.runtimeconfig.json
 C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\Infra\bin\Debug\net7.0\Infra.dll
 C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\Infra\bin\Debug\net7.0\Infra.pdb
 C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\Infra\bin\Debug\net7.0\Domain.dll
@@ -12,4 +13,5 @@ C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\Infra\obj\Debug\net7.0\Infra.c
 C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\Infra\obj\Debug\net7.0\Infra.dll
 C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\Infra\obj\Debug\net7.0\refint\Infra.dll
 C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\Infra\obj\Debug\net7.0\Infra.pdb
+C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\Infra\obj\Debug\net7.0\Infra.genruntimeconfig.cache
 C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\Infra\obj\Debug\net7.0\ref\Infra.dll
