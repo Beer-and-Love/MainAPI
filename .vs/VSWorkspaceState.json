@@ -3,14 +3,14 @@
     "",
     "\\src",
     "\\src\\API",
-    "\\src\\API\\bin\\Release",
     "\\src\\API\\Controllers",
     "\\src\\API\\Token",
-    "\\src\\API\\Utilities",
-    "\\src\\API\\ViewModels",
-    "\\src\\Domain",
-    "\\src\\Domain\\Validators"
+    "\\src\\Infra",
+    "\\src\\Infra\\Repositories",
+    "\\src\\Service",
+    "\\src\\Service\\Interfaces",
+    "\\src\\Service\\Services"
   ],
-  "SelectedNode": "\\src\\API\\ViewModels\\CreateUserViewModel.cs",
+  "SelectedNode": "\\src\\API\\Controllers\\AuthController.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -1,3 +1,10 @@
+C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\obj\Debug\net7.0\API.csproj.AssemblyReference.cache
+C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\obj\Debug\net7.0\API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\obj\Debug\net7.0\API.AssemblyInfoInputs.cache
+C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\obj\Debug\net7.0\API.AssemblyInfo.cs
+C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\obj\Debug\net7.0\API.csproj.CoreCompileInputs.cache
+C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\obj\Debug\net7.0\API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\obj\Debug\net7.0\API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\bin\Debug\net7.0\appsettings.json
 C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\bin\Debug\net7.0\API.exe
@@ -8,6 +15,7 @@ C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\bin\Debug\net7.0\API.pdb
 C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\bin\Debug\net7.0\AutoMapper.dll
 C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\bin\Debug\net7.0\Azure.Core.dll
 C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\bin\Debug\net7.0\BCrypt.Net.dll
 C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\bin\Debug\net7.0\FluentValidation.dll
 C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
@@ -58,13 +66,6 @@ C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\bin\Debug\net7.0\Service.d
 C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\bin\Debug\net7.0\Domain.pdb
 C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\bin\Debug\net7.0\Service.pdb
 C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\bin\Debug\net7.0\Infra.pdb
-C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\obj\Debug\net7.0\API.csproj.AssemblyReference.cache
-C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\obj\Debug\net7.0\API.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\obj\Debug\net7.0\API.AssemblyInfoInputs.cache
-C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\obj\Debug\net7.0\API.AssemblyInfo.cs
-C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\obj\Debug\net7.0\API.csproj.CoreCompileInputs.cache
-C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\obj\Debug\net7.0\API.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\obj\Debug\net7.0\API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\obj\Debug\net7.0\staticwebassets\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\obj\Debug\net7.0\staticwebassets\msbuild.build.API.props
 C:\Users\ARI'S\Desktop\CervejinhaLove\MainAPI\src\API\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.API.props
