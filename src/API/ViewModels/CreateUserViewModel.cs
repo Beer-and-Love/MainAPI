@@ -2,11 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
+using Domain.Enuns;
 
 namespace API.ViewModels
 {
-      public class CreateUserViewModel
+    public class CreateUserViewModel
     {
         [Required(ErrorMessage = "O nome não pode ser vazio")]
         [MinLength(3, ErrorMessage = "O nome deve ter no mínimo 3 caracteres.")]
@@ -24,5 +25,9 @@ namespace API.ViewModels
         [MinLength(10, ErrorMessage = "A senha deve ter no mínimo 10 caracteres.")]
         [MaxLength(80, ErrorMessage = "A senha deve ter no máximo 80 caracteres.")]
         public string Password { get; set; }
+
+
+        [EnumDataType(typeof(Status), ErrorMessage = "O valor do status é inválido")]
+        public Status? Status { get; set; }
     }
 }
