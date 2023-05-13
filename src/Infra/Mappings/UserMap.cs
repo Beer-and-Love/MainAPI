@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Domain.Entities;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Domain.Enuns;
 
 namespace Infra.Mappings
 {
@@ -12,7 +13,7 @@ namespace Infra.Mappings
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
-            builder.ToTable("User");  
+            builder.ToTable("User");
 
             builder.HasKey(x => x.Id);
 
@@ -37,6 +38,15 @@ namespace Infra.Mappings
                 .HasMaxLength(180)
                 .HasColumnName("email")
                 .HasColumnType("VARCHAR(180)");
+
+            builder.Property(x => x.Status)
+                .IsRequired()
+                .HasColumnName("status")
+                .HasColumnType("INT")
+                .HasConversion(
+                    status => (int)status,
+                    value => (Status)value);
+
         }
     }
 }
