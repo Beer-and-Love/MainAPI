@@ -4,37 +4,37 @@ using API.ViewModels;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Service.Interfaces;
-using Service.DTO;
+using BCrypt.Net;
+using Service.Services;
 namespace API.Controllers
 {
     [ApiController]
     public class AuthController : ControllerBase
     {
+        private readonly AuthenticationService _authenticationService;
         private readonly IConfiguration _configuration;
         private readonly ITokenGenerator _tokenGenerator;
-        private readonly IMapper _mapper;
-        private readonly IUserService _userService;
-
-        public AuthController(IConfiguration configuration, ITokenGenerator tokenGenerator, IMapper mapper, IUserService uservice)
+        public AuthController(AuthenticationService authenticationService,IConfiguration configuration,
+        ITokenGenerator tokenGenerator)
         {
+            _authenticationService = authenticationService;
             _configuration = configuration;
             _tokenGenerator = tokenGenerator;
-            _mapper = mapper;
-            _userService = uservice;
         }
 
         [HttpPost]
         [Route("/api/v1/auth/login")]
-        public IActionResult Login([FromBody] LoginViewModel loginViewModel)
+        public async Task<IActionResult> Login([FromBody] LoginViewModel loginViewModel)
         {
-           var userdto = new UserDto();
             try
             {
-                if (loginViewModel.Login == userdto.Email && loginViewModel.Password == userdto.Password )
+                var isPasswordValid = await _authenticationService.VerifyPassword(loginViewModel.Email, loginViewModel.Password);
+
+                if (isPasswordValid)
                 {
                     return Ok(new ResultViewModel
                     {
-                        Message = "Usuário autenticado com Sucesso!",
+                        Message = "Usuário autenticado com sucesso!",
                         Success = true,
                         Data = new
                         {
