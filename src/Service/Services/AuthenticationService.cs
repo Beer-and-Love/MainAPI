@@ -1,14 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Infra.Interfaces;
 using Domain.Entities;
 using BCrypt.Net;
-
+using Service.Interfaces;
 namespace Service.Services
 {
-    public class AuthenticationService
+    public class AuthenticationService : IAuthenticationService
     {
         private readonly IUserRepository _userRepository; // Repositório de usuários
 
@@ -24,9 +20,17 @@ namespace Service.Services
             if (user == null)
                 return false;
 
-            // Lógica de verificação da senha com bcrypt
-            var hashedPassword = user.Password; // Obtém o hash da senha armazenada
-            return BCrypt.Net.BCrypt.Verify(enteredPassword, hashedPassword);
+           
+            var hashedPassword = user.Password; 
+            if (hashedPassword == enteredPassword)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
         }
 
     }
