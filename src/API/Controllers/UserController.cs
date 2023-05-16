@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Service.DTO;
 using Service.Interfaces;
-
+using Microsoft.AspNetCore.Cors;
 namespace API.Controllers
 {
    [ApiController]
@@ -153,8 +153,9 @@ namespace API.Controllers
 
 
         [HttpGet]
-        [Authorize]
+        // [Authorize]
         [Route("/api/v1/users/get-all")]
+        [EnableCors]
         public async Task<IActionResult> Get()
         {
             try

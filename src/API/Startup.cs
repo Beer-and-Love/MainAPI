@@ -28,6 +28,15 @@ namespace API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.AllowAnyOrigin()
+                            .AllowAnyMethod()
+                            .AllowAnyHeader();
+                });
+            });
 
             services.AddControllers();
             services.AddSingleton(cfg => Configuration);
@@ -165,7 +174,7 @@ namespace API
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-           
+
             app.UseDeveloperExceptionPage();
             app.UseSwagger();
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "MainAPI v1"));
@@ -179,6 +188,7 @@ namespace API
             app.UseAuthorization();
 
             //app.UseCustomExceptionHandler();
+            app.UseCors();
 
             app.UseEndpoints(endpoints =>
             {
