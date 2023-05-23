@@ -40,7 +40,7 @@ namespace Infra.Mappings
                 .HasColumnType("VARCHAR(180)");
 
             builder.Property(x => x.Status)
-                .IsRequired()
+                // .IsRequired()
                 .HasColumnName("status")
                 .HasColumnType("INT")
                 .HasConversion(
