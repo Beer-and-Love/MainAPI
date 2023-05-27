@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Domain.Entities;
 using FluentValidation;
 
@@ -63,12 +59,12 @@ namespace Domain.Validators
                 .MaximumLength(80)
                 .WithMessage("A senha deve ter no máximo 80 caracteres.");
 
-            //RuleFor(x => x.Status)
-            //    .NotEmpty()
-            //    .WithMessage("O status não pode ser vazio")
+            RuleFor(x => x.City)
+               .NotEmpty()
+               .WithMessage("A cidade não pode ser vazia")
 
-            //    .NotNull()
-            //    .WithMessage("O status não pode ser nulo");
+               .NotNull()
+               .WithMessage("A cidade não pode ser nula");
 
 
         }
