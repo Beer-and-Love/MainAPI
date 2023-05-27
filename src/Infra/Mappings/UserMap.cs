@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Domain.Entities;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -40,12 +36,30 @@ namespace Infra.Mappings
                 .HasColumnType("VARCHAR(180)");
 
             builder.Property(x => x.Status)
-                // .IsRequired()
                 .HasColumnName("status")
                 .HasColumnType("INT")
                 .HasConversion(
                     status => (int)status,
                     value => (Status)value);
+
+            builder.Property(x => x.City)
+                .HasMaxLength(180)
+                .HasColumnName("city")
+                .HasColumnType("VARCHAR(180)");
+
+            builder.Property(x => x.Informations)
+                .HasMaxLength(250)
+                .HasColumnName("informations")
+                .HasColumnType("VARCHAR(250)");
+
+            builder.OwnsOne(x => x.Localization, loc =>
+            {
+                loc.Property(l => l.Latitude)
+                    .HasColumnName("Latitude");
+
+                loc.Property(l => l.Longitude)
+                    .HasColumnName("Longitude");
+            });
 
         }
     }

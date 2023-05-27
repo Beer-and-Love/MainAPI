@@ -7,7 +7,5 @@ using Domain.Entities;
 namespace Infra.Interfaces
 {
     public interface ILocalizationRepository : IBaseRepository<Localization>
-    {
-        Task<List<Localization>> SearchByCity(string city);
-    }
+    {}
 }
