@@ -8,6 +8,7 @@ namespace Service.Interfaces
     public interface IAuthenticationService
     {
         Task<bool> VerifyPassword(string email, string enteredPassword);
+        Task<long> IdForToken(string email);
     }
 
 }

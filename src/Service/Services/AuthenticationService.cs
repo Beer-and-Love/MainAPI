@@ -1,6 +1,4 @@
 using Infra.Interfaces;
-using Domain.Entities;
-using BCrypt.Net;
 using Service.Interfaces;
 namespace Service.Services
 {
@@ -31,6 +29,13 @@ namespace Service.Services
                 return false;
             }
             
+        }
+
+        public async Task<long> IdForToken(string email)
+        {
+            var userId = await _userRepository.GetByEmail(email);
+            return userId.Id;
+
         }
 
     }

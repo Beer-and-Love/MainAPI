@@ -2,7 +2,6 @@
 using API.ViewModels;
 using AutoMapper;
 using Domain.Exceptions;
-using Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Service.DTO;
@@ -16,9 +15,9 @@ namespace API.Controllers
         private readonly IUserService _userService;
         private readonly IMapper _mapper;
 
-        public UserController(IUserService uservice, IMapper mapper)
+        public UserController(IUserService userService, IMapper mapper)
         {
-            _userService = uservice;
+            _userService = userService;
             _mapper = mapper;
         }
 
@@ -287,5 +286,43 @@ namespace API.Controllers
                 return StatusCode(500, Responses.ApplicationErrorMessage());
             }
         }
+
+        [HttpGet]
+        // [Authorize]
+        [Route("/api/v1/users/search-by-city")]
+        public async Task<IActionResult> SearchByCityAsync([FromQuery] string city)
+        {
+            try
+            {
+                var allUsers = await _userService.SearchByCity(city);
+
+                if (allUsers.Count == 0)
+                {
+                    return Ok(new ResultViewModel
+                    {
+                        Message = "Nenhum usuário encontrado com a cidade informada!",
+                        Success = true,
+                        Data = null
+                    });
+                }
+                return Ok(new ResultViewModel
+                {
+                    Message = "Usuário encontrado com sucesso!",
+                    Success = true,
+                    Data = allUsers
+                });
+            }
+            catch (DomainException ex)
+            {
+                return BadRequest(Responses.DomainErrorMessage(ex.Message, ex.Errors));
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, Responses.ApplicationErrorMessage());
+            }
+        }
+
+
+
     }
 }

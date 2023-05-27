@@ -7,6 +7,7 @@ namespace API.Token
 {
     public interface ITokenGenerator
     {
-        string GenerateToken(); 
+        string GenerateToken(long userID); 
+        int ExtractUserId(string token);
     }
 }

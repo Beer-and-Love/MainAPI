@@ -14,12 +14,15 @@ namespace API.Controllers
         private readonly IAuthenticationService _authenticationService;
         private readonly IConfiguration _configuration;
         private readonly ITokenGenerator _tokenGenerator;
-        public AuthController(IAuthenticationService authenticationService,IConfiguration configuration,
-        ITokenGenerator tokenGenerator)
+        private readonly IUserService _userService;
+
+        public AuthController(IAuthenticationService authenticationService, IConfiguration configuration,
+        ITokenGenerator tokenGenerator, IUserService userService)
         {
             _authenticationService = authenticationService;
             _configuration = configuration;
             _tokenGenerator = tokenGenerator;
+            _userService = userService;
         }
 
         [HttpPost]
@@ -30,15 +33,19 @@ namespace API.Controllers
             {
                 var isPasswordValid = await _authenticationService.VerifyPassword(loginViewModel.Email, loginViewModel.Password);
 
-                if (isPasswordValid == true)
+                if (isPasswordValid)
                 {
+                    var userId = await _authenticationService.IdForToken(loginViewModel.Email);
+                    var token = _tokenGenerator.GenerateToken(userId); 
+
+
                     return Ok(new ResultViewModel
                     {
                         Message = "Usuário autenticado com sucesso!",
                         Success = true,
                         Data = new
                         {
-                            Token = _tokenGenerator.GenerateToken(),
+                            Token = token,
                             TokenExpires = DateTime.UtcNow.AddHours(int.Parse(_configuration["Jwt:HoursToExpire"]))
                         }
                     });

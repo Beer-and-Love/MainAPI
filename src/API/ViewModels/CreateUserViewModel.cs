@@ -1,10 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using Domain.Enuns;
-
+using Domain.Entities;
 namespace API.ViewModels
 {
     public class CreateUserViewModel
@@ -27,7 +23,20 @@ namespace API.ViewModels
         public string Password { get; set; }
 
 
+        [Required(ErrorMessage = "A cidade não pode ser vazio")]
+        [MaxLength(180, ErrorMessage = "A cidade deve ter no máximo 180 caracteres.")]
+        public string City { get; set; }
+
+        [Required(ErrorMessage = "As informações não podem ser vazias")]
+        [MaxLength(250, ErrorMessage = "As informações devem ter no máximo 250 caracteres.")]
+        public string Informations { get; set; }
+
+
         [EnumDataType(typeof(Status), ErrorMessage = "O valor do status é inválido")]
         public Status? Status { get; set; }
+
+
+        [Required(ErrorMessage = "A localização é obrigatória")]
+        public Localization? Localization { get; set; }
     }
 }

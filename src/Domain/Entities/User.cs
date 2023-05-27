@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Domain.Validators;
 using Domain.Exceptions;
 using Domain.Enuns;
@@ -10,10 +6,13 @@ namespace Domain.Entities
 {
     public class User : Base
     {
-        public string Name { get;  set; }
-        public string Email { get;  set; }
-        public string Password { get;  set; }
-        public Status? Status {get; set;}
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public string City { get; set; }
+        public string Informations { get; set; }
+        public Localization? Localization { get; set; }
+        public Status? Status { get; set; }
 
         public User() { }
 
@@ -34,9 +33,9 @@ namespace Domain.Entities
 
             if (!validation.IsValid)
             {
-                foreach(var error in validation.Errors)
+                foreach (var error in validation.Errors)
                     _errors.Add(error.ErrorMessage);
-                throw new DomainException("Alguns campos estão inválidos, por favor corrigir" , _errors);
+                throw new DomainException("Alguns campos estão inválidos, por favor corrigir", _errors);
             }
             return true;
         }
