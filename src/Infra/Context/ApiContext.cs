@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Infra.Mappings;
@@ -17,13 +13,15 @@ namespace Infra.Context
         {}
 
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Localization> Localization { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            => optionsBuilder.UseInMemoryDatabase("teste");
+            => optionsBuilder.UseSqlServer(@"");
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfiguration(new UserMap());
+            builder.ApplyConfiguration(new LocalizationMap());
         }
 
     }
