@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Domain.Entities;
 using Infra.Interfaces;
 using Infra.Context;
@@ -36,6 +32,18 @@ namespace Infra.Repositories
                .Where
                (
                    x => x.Email.ToLower().Contains(email.ToLower())
+               )
+               .AsNoTracking()
+               .ToListAsync();
+
+            return allUsers;
+        }
+        public async Task<List<User>> SearchByCity(string city)
+        {
+            var allUsers = await _context.Users
+               .Where
+               (
+                   x => x.City.ToLower().Contains(city.ToLower())
                )
                .AsNoTracking()
                .ToListAsync();
