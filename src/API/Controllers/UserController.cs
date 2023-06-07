@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Cors;
 namespace API.Controllers
 {
    [ApiController]
-    public class UserController :ControllerBase
+    public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
         private readonly IMapper _mapper;
