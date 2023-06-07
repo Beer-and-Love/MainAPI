@@ -11,7 +11,7 @@ namespace Service.DTO
         public string Password { get;  set; }
         public string City { get;  set; }
         public string Informations { get;  set; }
-        public Localization Localization { get;  set; }
+        public Localization? Localization { get;  set; }
         public Status? Status { get;  set; }
 
         public UserDto()
