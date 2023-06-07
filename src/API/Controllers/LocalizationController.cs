@@ -10,22 +10,28 @@ namespace API.Controllers
     {
         private readonly ILocalizationService _localizationService;
         private readonly ITokenGenerator _tokenGenerator;
+
+        public LocalizationController(ILocalizationService localizationService, ITokenGenerator tokenGenerator)
+        {
+            _localizationService = localizationService;
+            _tokenGenerator = tokenGenerator;
+        }
         
         [HttpPost("/api/updateLocalization")]
-        public IActionResult UpdateUserLocalization([FromBody] LocalizationDto localizationDto)
+        public async Task<IActionResult> UpdateUserLocalization([FromBody] LocalizationDto localizationDto)
         {
             // Obter o token de autenticação do cabeçalho da requisição
-            string token = Request.Headers["Authorization"].ToString();
+            // string token = Request.Headers["Authorization"].ToString();
 
             // Obter o ID do usuário atual com base no token de autenticação
-            int currentUserId = _tokenGenerator.ExtractUserId(token);
+             long currentUserId = 1; //_tokenGenerator.ExtractUserId(token);
 
             if (currentUserId == 0)
             {
                 return Unauthorized();
             }
             
-            _localizationService.UpdateUserLocalization(currentUserId, localizationDto);
+            await _localizationService.UpdateUserLocalization(currentUserId, localizationDto);
 
             return Ok();
         }
