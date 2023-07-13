@@ -70,6 +70,7 @@ namespace API
             var autoMapperConfig = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<User, UserDto>().ReverseMap();
+                cfg.CreateMap<Localization, LocalizationDto>().ReverseMap();
                 cfg.CreateMap<CreateUserViewModel, UserDto>().ReverseMap();
                 cfg.CreateMap<UpdateUserViewModel, UserDto>().ReverseMap();
             });
@@ -90,13 +91,14 @@ namespace API
             #region Repositories
 
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<ILocalizationRepository, LocalizationRepository>();
 
             #endregion
 
             #region Services
 
             services.AddScoped<IUserService, UserService>();
-
+            services.AddScoped<ILocalizationService, LocalizationService>();
             services.AddScoped<ITokenGenerator, TokenGenerator>();
             services.AddScoped<IAuthenticationService, AuthenticationService>();
 

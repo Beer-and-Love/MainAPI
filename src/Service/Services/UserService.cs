@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Service.DTO;
 using Service.Interfaces;
 using AutoMapper;
@@ -77,6 +73,12 @@ namespace Service.Services
         public async Task<List<UserDto>> SearchByEmail(string email)
         {
             var allUsers = await _userRepository.SearchByEmail(email);
+
+            return _mapper.Map<List<UserDto>>(allUsers);
+        }
+        public async Task<List<UserDto>> SearchByCity(string city)
+        {
+            var allUsers = await _userRepository.SearchByEmail(city);
 
             return _mapper.Map<List<UserDto>>(allUsers);
         }

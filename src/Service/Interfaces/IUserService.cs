@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Service.DTO;
 
 namespace Service.Interfaces
@@ -17,5 +13,6 @@ namespace Service.Interfaces
         Task<UserDto> GetByEmail(string email);
         Task<List<UserDto>> SearchByEmail(string email);
         Task<List<UserDto>> SearchByName(string name);
+        Task<List<UserDto>> SearchByCity(string city);
     }
 }

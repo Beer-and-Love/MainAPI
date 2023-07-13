@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Infra.Interfaces;
 using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -54,7 +50,7 @@ namespace Infra.Repositories
 
         public virtual async Task<T> Update(T obj)
         {
-            _context.Entry(obj).State = EntityState.Modified;
+            _context.Set<T>().Update(obj);
             await _context.SaveChangesAsync();
 
             return obj;

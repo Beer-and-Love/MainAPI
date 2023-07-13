@@ -59,13 +59,16 @@ namespace Domain.Validators
                 .MaximumLength(80)
                 .WithMessage("A senha deve ter no máximo 80 caracteres.");
 
-            RuleFor(x => x.City)
-               .NotEmpty()
-               .WithMessage("A cidade não pode ser vazia")
+            // RuleFor(x => x.City)
+            //    .NotEmpty()
+            //    .WithMessage("A cidade não pode ser vazia")
 
-               .NotNull()
-               .WithMessage("A cidade não pode ser nula");
-
+            //    .NotNull()
+            //    .WithMessage("A cidade não pode ser nula");
+            RuleFor(x => x.Localization)
+            .Cascade(CascadeMode.Stop) // Para de validar se a propriedade for nula
+            .SetValidator(new LocalizationValidator())
+            .When(x => x.Localization != null);
 
         }
     }

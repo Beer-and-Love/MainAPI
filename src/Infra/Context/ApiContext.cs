@@ -16,12 +16,11 @@ namespace Infra.Context
         public virtual DbSet<Localization> Localization { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            => optionsBuilder.UseSqlServer(@"");
+            => optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-BH2K3U2\SQLEXPRESS;Initial Catalog=BeerLove;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfiguration(new UserMap());
-            builder.ApplyConfiguration(new LocalizationMap());
         }
 
     }
